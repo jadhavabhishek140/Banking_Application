@@ -5,8 +5,7 @@ Cosmo bank
 Authentication
 Authorization
 
-User
-  - Create new Account
+Customer
   - Transfer Amount to other users
   - Check Details
   - Request Loan( Personal, Home, Car, Gold, Education)
@@ -15,12 +14,12 @@ User
   - Request Services Like Credit Card, Debit Card, Cheque Book, Pass Book
 
 Employee
- - User account Approval
+ - User account Creation
  - Approve loan
  - Cheque Approve
  - Grievances
  - Service Approval
- - Query Resolution
+ - Query Resolution  
  - User Details change
  - Freeze account
  - Approve Statements
