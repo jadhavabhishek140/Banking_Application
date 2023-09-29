@@ -1,0 +1,11 @@
+<mat-toolbar class="toolbar">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span style="margin-left: 25px;">Bank App</span>
+  <span class="example-spacer"></span>
+  <button class="button-style" (click)="gotoUserLogin()">User login</button>
+  <button class="button-style" (click)="gotoBankLogin()">Employee/Admin login</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

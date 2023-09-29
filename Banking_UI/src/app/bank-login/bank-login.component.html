@@ -1,0 +1,22 @@
+<div class="form-alignment">
+    <form [formGroup]="bankForm" (ngSubmit)="onLogin()">
+        <h3>Employee/Admin Login Form</h3>
+        <div class="form-control" style="margin-bottom: 30px;">
+          <label>User ID</label>
+          <input type="text" formControlName="username"/>
+        </div>
+        <div class="form-control" style="margin-bottom: 30px;">
+          <label>Password</label>
+          <input type="password" formControlName="password"/>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label>User type</label>
+            <select formControlName="usertype" class="form-control">
+                <option disabled>Select user type</option>
+                <option>Choose user type</option>
+                <option *ngFor="let i of userTypeList">{{i}}</option>
+            </select>
+          </div>
+        <button type="submit" class="button-style">Login</button>
+    </form>
+</div>

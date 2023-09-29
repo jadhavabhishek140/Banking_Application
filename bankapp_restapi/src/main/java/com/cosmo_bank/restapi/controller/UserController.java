@@ -8,6 +8,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,7 @@ import com.cosmo_bank.restapi.service.UserService;
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin("*")
 public class UserController {
 	
 	@Autowired
@@ -70,7 +72,7 @@ public class UserController {
 	@PostMapping("/user/register")
 	public ResponseEntity<Object> registerUser(@RequestBody RegisterRequest regReq) {
 		
-		if(!regReq.getPassword().equals(regReq.getConfirm_password())) {
+		if(!regReq.getPassword().equals(regReq.getConfirmPassword())) {
 			return new ResponseEntity<>("Passwords do not match.", HttpStatus.BAD_REQUEST);
 		}
 		

@@ -1,4 +1,4 @@
-# Banking_Application
+# BankApplicationProject
 
 Cosmo bank
  

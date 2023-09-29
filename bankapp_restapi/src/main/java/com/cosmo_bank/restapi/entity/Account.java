@@ -2,9 +2,12 @@ package com.cosmo_bank.restapi.entity;
 
 import java.time.LocalDate;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import com.cosmo_bank.restapi.enums.AccountType;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,10 +31,13 @@ public class Account {
 	@JoinColumn(name = "customer_id")
 	private Customer customer;
 	
+	@Column(unique = true, nullable = false, updatable = false)
 	private String accountNumber;
 	
 	private AccountType accountType;
 	
+	@Column(nullable = false)
+	@CreationTimestamp
 	private LocalDate openingDate;
 	
 	@ManyToOne(optional=true, cascade = {CascadeType.PERSIST, CascadeType.MERGE})

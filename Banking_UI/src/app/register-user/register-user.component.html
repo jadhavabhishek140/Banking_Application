@@ -1,0 +1,31 @@
+<div class="form-alignment">
+  <form *ngIf="!isCustomerVerified" [formGroup]="statusForm" (ngSubmit)="checkStatus(statusForm.value)">
+    <h3>Verify User Status</h3>
+    <div class="form-control" style="margin-bottom: 30px;">
+      <label>Account Number</label><br>
+      <input type="number" formControlName="accountNumber" />
+    </div>
+    <div class="form-control" style="margin-bottom: 30px;">
+      <label>Phone Number</label><br>
+      <input type="number" formControlName="phoneNumber" />
+    </div>
+    <button type="submit" class="button-style">Check Status</button>
+  </form>
+
+  <form *ngIf="isCustomerVerified" [formGroup]="signUpForm" (ngSubmit)="onSignUp(signUpForm.value)">
+    <h3>User SignUp Form</h3>
+    <div class="form-control" style="margin-bottom: 30px;">
+      <label>Username</label><br>
+      <input type="text" formControlName="username" />
+    </div>
+    <div class="form-control" style="margin-bottom: 30px;">
+      <label>Password</label><br>
+      <input type="password" formControlName="password" />
+    </div>
+    <div class="form-control" style="margin-bottom: 10px;">
+      <label>Confirm Password</label><br>
+      <input type="password" formControlName="confirmPassword" />
+    </div>
+    <button type="submit" class="button-style">Sign Up</button>
+  </form>
+</div>

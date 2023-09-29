@@ -9,7 +9,7 @@ public class RegisterRequest {
 	
 	private String password;
 	
-	private String confirm_password;
+	private String confirmPassword;
 	
 	private int customerId;
 

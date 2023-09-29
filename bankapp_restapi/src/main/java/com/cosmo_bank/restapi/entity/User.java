@@ -21,7 +21,9 @@ public class User {
 	
 	@Column(unique = true)
 	private String username;
+	
 	private String password;
+	
 	private Usertype usertype;
 	
 	public User(String username, String password, Usertype usertype) {
